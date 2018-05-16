@@ -54,7 +54,7 @@ open class Channel: Hashable, Equatable {
             
             //if identifier isn't empty, fetch the first value as the channel unique identifier
             if let dictionary = identifier?.first {
-                channelUID = dictionary.value as! String
+                channelUID += (dictionary.value as? String) ?? ""
             }
             
             return channelUID
