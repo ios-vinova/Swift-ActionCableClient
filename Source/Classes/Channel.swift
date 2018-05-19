@@ -60,7 +60,7 @@ open class Channel: Hashable, Equatable {
             // May 19th - Using "." as UID
             guard let list = identifier else { return channelUID }
             list.forEach {
-                if $0.key.first = ".", let _value = $0.value as? String {
+                if $0.key.first == ".", let _value = $0.value as? String {
                     channelUID = _value
                 }
             }

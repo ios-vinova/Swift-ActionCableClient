@@ -236,7 +236,7 @@ extension ActionCableClient {
         // May 19th - Using "." as UID
         if let list = identifier {
             list.forEach {
-                if $0.key.first = ".", let _value = $0.value as? String {
+                if $0.key.first == ".", let _value = $0.value as? String {
                     channelUID = _value
                 }
             }
