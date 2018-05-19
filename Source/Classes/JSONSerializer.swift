@@ -101,10 +101,10 @@ internal class JSONSerializer {
 //                    channelIdentifier = item.value as? String
 //                }
 
-                // May 19th - Using "." as a UID of identifier
+                // May 19th - Using "." as a UID
                 idJSON.forEach {
-                    if $0.key.first == "." {
-                        channelIdentifier = $0.value as? String
+                    if $0.key.first == ".", let _value = $0.value as? String  {
+                        channelIdentifier = _value
                     }
                 }
                 
